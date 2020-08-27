@@ -2,6 +2,9 @@ package Exercises_on_simple_algorithms;
 
 import lombok.Data;
 
+
+
+
 @Data
 public class Algorithm {
 
@@ -13,6 +16,9 @@ public class Algorithm {
         this.n = n;
         this.l = l;
         this.y = y;
+    }
+
+    public Algorithm() {
     }
 
     public int factorial(){
@@ -27,7 +33,7 @@ public class Algorithm {
         return 0;
     }*/
 
-    public boolean primeNumber(){
+    public boolean primeNumber(int n){
         boolean prNum = false;
         for(int i = 2; i <= n/2; ++i)
         {// condition for non prime number

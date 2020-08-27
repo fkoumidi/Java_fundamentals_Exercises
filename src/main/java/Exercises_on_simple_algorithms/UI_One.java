@@ -2,8 +2,8 @@ package Exercises_on_simple_algorithms;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class UI_One {
+    public void ui_one(){
 
         int choice;
         int n=0;
@@ -81,7 +81,7 @@ public class Main {
                 System.out.println("Tuesday");
                 break;
             case 3:
-                if(algo.primeNumber())
+                if(algo.primeNumber(n))
                 {System.out.println("The number"+n+" is not prime number");}
                 else
                 {System.out.println("The number"+n+" is prime number");}

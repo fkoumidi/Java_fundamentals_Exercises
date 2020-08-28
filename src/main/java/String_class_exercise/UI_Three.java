@@ -11,9 +11,9 @@ public class UI_Three {
     public void ui_three() {
         do {int count=0;
             Scanner myObj = new Scanner(System.in);
-            //System.out.print("\nEnter your password:");
-            //str = myObj.nextLine();
-            str="Mgh6phee";
+            System.out.print("\nEnter your password:");
+            str = myObj.nextLine();
+            //str="Mgh6ph111@";
             Password pw = new Password(str);
             Message ms =new Message();
 
@@ -21,11 +21,11 @@ public class UI_Three {
             for (Boolean a : list) {
                 if (a) { count++; }
             }
-            for (Boolean a : list) {
+            /*for (Boolean a : list) {
                 System.out.println(a);
-            }
+            }*/
 
-            if (!pw.whitespace()) {
+            if (pw.whitespace()) {
                 if(pw.length()){
                     switch (count){
                         case 1:
@@ -51,7 +51,6 @@ public class UI_Three {
             else{
                 System.out.print("No whitespace allowed in the password...");
                 b=ms.invalid();}
-
         }while(b);
     }
 }

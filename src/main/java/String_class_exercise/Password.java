@@ -11,42 +11,41 @@ public class Password {
     Matcher matcher;
 
     public Password(String password) {
-        this.password = password;
+       this.password = password;
     }
 
-    public boolean uppercase(){
-        pattern = Pattern.compile("^(?=.*[A-Z])$");
-        matcher = pattern.matcher(password);
-
-        return matcher.matches();
-    }
-
-    public boolean lowercase(){
-        String pattern = "^(?=.*[a-z])$";
+    public Boolean uppercase(){
+        String pattern = "^(?=.*[A-Z]).{8,}$";
         return password.matches(pattern);
     }
 
-    public boolean number(){
-        String pattern = "(?=.*[0-9])";
+    public Boolean lowercase(){
+        String pattern = "^(?=.*[a-z]).{8,}$";
         return password.matches(pattern);
     }
 
-    public boolean specialChar(){
-        String pattern = "(?=.*[@#$%^&+=])";
+    public Boolean number(){
+        String pattern = "^(?=.*[0-9]).{8,}$";
         return password.matches(pattern);
     }
 
-    public boolean length(){
+    public Boolean specialChar(){
+        String pattern = "^(?=.*[@#$%^&+=]).{8,}$";
+        return password.matches(pattern);
+    }
+
+
+    public Boolean whitespace(){
+        String pattern = "^(?=\\S+$).{8,}$";
+        return password.matches(pattern);
+    }
+
+    public Boolean identicalChars(){
+        String pattern = ".*([a-z\\d])\\1\\1.*";
+        return !password.matches(pattern);
+    }
+
+    public Boolean length(){
         return password.length() >= 8;
-    }
-
-    public boolean whitespace(){
-        String pattern = "(?=\\S+$)";
-        return password.matches(pattern);
-    }
-
-    public boolean identicalChars(){
-        String pattern = "(?i)(?:([a-z0-9])\\\\1{2,})*";
-        return password.matches(pattern);
     }
 }

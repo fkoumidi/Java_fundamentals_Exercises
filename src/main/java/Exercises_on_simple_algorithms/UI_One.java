@@ -11,8 +11,8 @@ public class UI_One {
         long l=0;
         float y=0;
         System.out.println("Make a choice between 1-6 \n\n"+
-                        "1. Calculate the factorial of a number n \n" +
-                        "2. Find the maximum value of n as int so that the calculated  output is valid \n"+
+                        "1. Find the maximum value of n as int so that the calculated  output is validCalculate the factorial of a number n \n" +
+                        "2. Calculate the factorial of a number n \n"+
                         "3. Write a program that returns true or false depending on if the number is prime or not \n"+
                         "4. Calculates the following value: 1 + ½ + ⅓ + … + 1/n \n"+
                         "5. Counts the digits of a long number \n"+
@@ -31,7 +31,7 @@ public class UI_One {
         }}while(true);
 
 
-        if(choice<5){
+        if(choice<5 && choice>1){
             do{
                 try {
                     Scanner myObj2 = new Scanner(System.in);
@@ -56,7 +56,7 @@ public class UI_One {
                     System.out.print("Something went wrong....");
                 }}while(true);
         }
-        else{
+        else if(choice==6){
             do{
                 try {
                     Scanner myObj2 = new Scanner(System.in);
@@ -72,20 +72,21 @@ public class UI_One {
         }
 
 
+
         Algorithm algo = new Algorithm(n,l,y);
 
         switch (choice) {
             case 1:
-                System.out.println("The factorial of a number "+n+ " is "+ algo.factorial());
+                System.out.println("The maximum value of n as int so that the calculated  output is valid is:"+algo.maxVal());
                 break;
             case 2:
-                System.out.println("Tuesday");
+                System.out.println("The factorial of a number "+n+ " is "+ algo.factorial(n));
                 break;
             case 3:
                 if(algo.primeNumber(n))
-                {System.out.println("The number"+n+" is not prime number");}
+                {System.out.println("The number "+n+" is not prime number");}
                 else
-                {System.out.println("The number"+n+" is prime number");}
+                {System.out.println("The number "+n+" is prime number");}
                 break;
             case 4:
                 System.out.println("The result is:"+algo.calcValue());

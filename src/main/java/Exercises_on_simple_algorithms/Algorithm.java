@@ -21,7 +21,7 @@ public class Algorithm {
     public Algorithm() {
     }
 
-    public int factorial(){
+    public int factorial(int n){
         int fact=1;
         for (int i=1;i<=n;i++){
             fact =fact*i;
@@ -29,9 +29,16 @@ public class Algorithm {
         return fact;
     }
 
-   /* public int maxVal(){
-        return 0;
-    }*/
+    public int maxVal(){
+        int calc;
+        int w=0;
+        do{
+            w++;
+           calc=factorial(w) ;
+
+        }while(calc>0);
+        return w-1;
+    }
 
     public boolean primeNumber(int n){
         boolean prNum = false;

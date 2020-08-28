@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.*;
 
 public class UI_Two {
     public void ui_two(){
 
         List<Integer> list = new ArrayList<Integer>();
         int choice;
-        String choice2;
+        char choice2;
         int n=0;
         int random_int;
         String s="";
@@ -43,10 +44,11 @@ public class UI_Two {
             do{
                 try {
                     Scanner myObj = new Scanner(System.in);
-                    System.out.print("Press R to generate a random list of integers or M to create it manually: ");
-                    choice2 = myObj.nextLine();
-                    choice2.toUpperCase();
-                    if (!choice2.equals("R") && !choice2.equals("M")){
+                    System.out.print("Press \"R\" to generate a random list of integers or \"M\" to create it manually: ");
+                    choice2 = myObj.next().charAt(0);
+                    choice2=Character.toUpperCase(choice2);
+
+                    if (!Character.toString(choice2).equals("R") && !Character.toString(choice2).equals("M")){
                         System.out.print("Wrong choice....");
                         continue;}
                     break;
@@ -64,7 +66,7 @@ public class UI_Two {
                     System.out.print("Something went wrong....."); }
             }while(true);
 
-            if (choice2.equals("R")) {
+            if ( Character.toString(choice2).equals("R")) {
                 for (int i = 0; i < elements; i++) {
                     Random rand = new Random();
                     int upperbound = 1000; //

@@ -1,6 +1,7 @@
 package Exercises_on_simple_algorithms;
 
 import java.util.Scanner;
+import java.lang.*;
 
 public class UI_One {
     public void ui_one(){
@@ -22,11 +23,11 @@ public class UI_One {
                 System.out.print("Enter your choice:");
                 choice = myObj.nextInt();
                 if (choice<1 || choice>6){
-                    System.out.print("Out of range.Choose again:");
+                    System.out.print("Out of range....");
                     continue;}
                 break;
             } catch (Exception e) {
-                System.out.print("Something went wrong.Choose again:");
+                System.out.print("Something went wrong....");
         }}while(true);
 
 
@@ -37,11 +38,11 @@ public class UI_One {
                     System.out.print("Give a positive integer:");
                     n= myObj2.nextInt();
                     if (n<=0){
-                        System.out.print("Wrong choice.Choose again:");
+                        System.out.print("Wrong choice....");
                         continue;}
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Choose again:");
+                    System.out.print("Something went wrong....");
                 }}while(true);
         }
         else if(choice==5){
@@ -52,7 +53,7 @@ public class UI_One {
                     l= myObj2.nextLong();
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Choose again:");
+                    System.out.print("Something went wrong....");
                 }}while(true);
         }
         else{
@@ -62,11 +63,11 @@ public class UI_One {
                     System.out.print("Give a positive float number:");
                     y= myObj2.nextFloat();
                     if (y<=0){
-                        System.out.print("Wrong choice.Choose again:");
+                        System.out.print("Wrong choice....");
                         continue;}
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Choose again:");
+                    System.out.print("Something went wrong....");
                 }}while(true);
         }
 
@@ -95,14 +96,12 @@ public class UI_One {
             case 6:
                 System.out.print("The decimal part of number "+y+" is ");
                 System.out.printf("%.4f", algo.decimalPart());
+                System.out.println("");
                 break;
 
         }
 
-        Scanner myObj3 = new Scanner(System.in);
-        System.out.print("Press C to try again or anything else to exit");
-        String button = myObj3.next();
-        button.toUpperCase();
-        //if(button.equals("C")){main(strArr); }
-}
+
+
+    }
 }

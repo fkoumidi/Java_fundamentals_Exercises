@@ -1,5 +1,7 @@
 import Exercises_on_arrays_collections.UI_Two;
 import Exercises_on_simple_algorithms.UI_One;
+import String_class_exercise.UI_Three;
+import String_class_exercise.UI_Three;
 
 import java.util.Scanner;
 
@@ -41,6 +43,8 @@ public class General_UI {
                        ui2.ui_two();
                        break;
                    case 3:
+                       UI_Three ui3 = new UI_Three();
+                       ui3.ui_three();
                        break;
                }
                Scanner myObj = new Scanner(System.in);

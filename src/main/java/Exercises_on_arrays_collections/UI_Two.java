@@ -1,5 +1,6 @@
 package Exercises_on_arrays_collections;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,7 +12,7 @@ public class UI_Two {
         List<Integer> list = new ArrayList<Integer>();
         int choice;
         String choice2;
-        long l=0;
+        int n=0;
         int random_int;
         String s="";
         int elements;
@@ -31,26 +32,26 @@ public class UI_Two {
                 System.out.print("Enter your choice:");
                 choice = myObj.nextInt();
                 if (choice<1 || choice>5){
-                    System.out.print("Out of range.Choose again:");
+                    System.out.print("Out of range...");
                     continue;}
                 break;
             } catch (Exception e) {
-                System.out.print("Something went wrong.Choose again:");
+                System.out.print("Something went wrong....");
             }}while(true);
 
         if(choice==1 || choice==2){
             do{
                 try {
                     Scanner myObj = new Scanner(System.in);
-                    System.out.print("Press R to generate a random list of integers or M to create it manually ");
+                    System.out.print("Press R to generate a random list of integers or M to create it manually: ");
                     choice2 = myObj.nextLine();
                     choice2.toUpperCase();
                     if (!choice2.equals("R") && !choice2.equals("M")){
-                        System.out.print("Press R or M....Choose again:");
+                        System.out.print("Wrong choice....");
                         continue;}
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Choose again:");
+                    System.out.print("Something went wrong...");
                 }}while(true);
 
             do{
@@ -60,7 +61,7 @@ public class UI_Two {
                     elements= myObj4.nextInt();
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Write again:"); }
+                    System.out.print("Something went wrong....."); }
             }while(true);
 
             if (choice2.equals("R")) {
@@ -80,7 +81,7 @@ public class UI_Two {
                             random_int= myObj4.nextInt();
                             break;
                         } catch (Exception e) {
-                            System.out.print("Something went wrong.Write again:");
+                            System.out.print("Something went wrong....");
                         }
                     }while(true);
                     list.add(random_int);
@@ -91,11 +92,11 @@ public class UI_Two {
             do{
                 try {
                     Scanner myObj2 = new Scanner(System.in);
-                    System.out.print("Give an integer number:");
-                    l= myObj2.nextLong();
+                    System.out.print("Give an number:");
+                    n= myObj2.nextInt();
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Give a number again:");
+                    System.out.print("Something went wrong....");
                 }}while(true);
         }
         else if (choice==4){
@@ -106,7 +107,7 @@ public class UI_Two {
                     s= myObj2.nextLine();
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Write again:");
+                    System.out.print("Something went wrong...:");
                 }}while(true);
         }
         else{
@@ -117,30 +118,31 @@ public class UI_Two {
                     s= myObj2.nextLine();
                     break;
                 } catch (Exception e) {
-                    System.out.print("Something went wrong.Write again:");
+                    System.out.print("Something went wrong....:");
                 }}while(true);
         }
 
+        Exercises2 exe = new Exercises2();
 
         switch (choice) {
             case 1:
-                //System.out.println("The factorial of a number " + n + " is " + algo.factorial());
+                System.out.println("The initial list is: "+ list);
+                System.out.println("The final list with prime numbers is:"+ exe.sublist(list));
                 break;
             case 2:
-               // System.out.println("Tuesday");
+                System.out.println("The initial list is: "+ list);
+                System.out.println("The final list without duplicated elements is:"+ exe.elimDuplicate(list));
                 break;
             case 3:
-               // if (algo.primeNumber()) {
-               //     System.out.println("The number" + n + " is not prime number");
-               // } else {
-               //     System.out.println("The number" + n + " is prime number");
-                //}
+                System.out.print("The digits of number in descending order:");
+                exe.desc_digits(n);
                 break;
             case 4:
-                //System.out.println("The result is:" + algo.calcValue());
+                System.out.print("The reversed string is:");
+                exe.reserveString(s);
                 break;
             case 5:
-               // System.out.println("The digits of a number " + l + " is " + algo.countDigits());
+                exe.symmetricWord(s);
                 break;
         }
     }

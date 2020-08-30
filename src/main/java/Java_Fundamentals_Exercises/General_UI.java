@@ -1,7 +1,8 @@
-import Exercises_on_arrays_collections.UI_Two;
-import Exercises_on_simple_algorithms.UI_One;
-import String_class_exercise.UI_Three;
-import String_class_exercise.UI_Three;
+package Java_Fundamentals_Exercises;
+
+import Java_Fundamentals_Exercises.Exercises_on_arrays_collections.UI_Two;
+import Java_Fundamentals_Exercises.Exercises_on_simple_algorithms.UI_One;
+import Java_Fundamentals_Exercises.String_class_exercise.UI_Three;
 
 import java.util.Scanner;
 

@@ -1,4 +1,6 @@
-package String_class_exercise;
+package Java_Fundamentals_Exercises.String_class_exercise;
+
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;

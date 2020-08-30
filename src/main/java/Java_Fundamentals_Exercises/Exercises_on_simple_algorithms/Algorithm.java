@@ -1,4 +1,4 @@
-package Exercises_on_simple_algorithms;
+package Java_Fundamentals_Exercises.Exercises_on_simple_algorithms;
 
 import lombok.Data;
 
@@ -42,6 +42,7 @@ public class Algorithm {
 
     public boolean primeNumber(int n){
         boolean prNum = false;
+        if (n==1 || n==0){return true;}
         for(int i = 2; i <= n/2; ++i)
         {// condition for non prime number
             if(n % i == 0) {

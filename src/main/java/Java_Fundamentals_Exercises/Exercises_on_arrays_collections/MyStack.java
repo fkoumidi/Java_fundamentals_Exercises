@@ -1,4 +1,4 @@
-package Exercises_on_arrays_collections;
+package Java_Fundamentals_Exercises.Exercises_on_arrays_collections;
 
 import lombok.Data;
 

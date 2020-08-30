@@ -1,6 +1,5 @@
-package Exercises_on_arrays_collections;
+package Java_Fundamentals_Exercises.Exercises_on_arrays_collections;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,7 +9,7 @@ import java.lang.*;
 public class UI_Two {
     public void ui_two(){
 
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
         int choice;
         char choice2;
         int n=0;
@@ -19,7 +18,7 @@ public class UI_Two {
         int elements;
 
 
-        System.out.println("Make a choice between 1-5 \n\n"+
+        System.out.println("\nMake a choice between 1-5 \n\n"+
                 "1. Given a list of integers, return a sub list that contains only the prime numbers  \n" +
                 "2. Implement a way of finding a list eliminating the duplicates from a list \n"+
                 "3. Write a program that returns the digits of number in descending order. \n"+

@@ -1,12 +1,11 @@
-package Exercises_on_arrays_collections;
-import  Exercises_on_simple_algorithms.Algorithm;
+package Java_Fundamentals_Exercises.Exercises_on_arrays_collections;
+import Java_Fundamentals_Exercises.Exercises_on_simple_algorithms.Algorithm;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
+import java.util.stream.Collectors;
+
 
 @Data
 public class Exercises2 {
@@ -24,21 +23,28 @@ public class Exercises2 {
     }*/
 
     public List<Integer> sublist(List<Integer> list){
-
+        list2 = list.stream().filter(i->!algo.primeNumber(i)).
+                collect(Collectors.toList());
+        /*  another implementation
         for (int i:list) {
             if(!algo.primeNumber(i)){
                 list2.add(i);
             }
-        }
+        }*/
         return list2;
     }
 
-    public List<Integer> elimDuplicate(List<Integer> list){
+    public Set<Integer> elimDuplicate(List<Integer> list){
+        return new HashSet<>(list);
+        /* another implementation
         for (int i:list) {
             if(!list2.contains(i)){
                 list2.add(i);
             }}
-        return list2;
+
+            return list2;
+         */
+
     }
 
     public void desc_digits(int n){
@@ -47,13 +53,12 @@ public class Exercises2 {
             n /= 10;
         } while  (n > 0);
         list2.sort(Collections.reverseOrder());
-        for(int i: list2){
-            System.out.print(i);
-        }
+        list2.forEach(System.out::print);
+        System.out.println(" ");
     }
 
     public void reserveString(String s){
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i ++) {
             stack.push(s.charAt(i));
         }
@@ -64,11 +69,11 @@ public class Exercises2 {
     }
 
     public void symmetricWord(String s){
-        String rev="";
+        StringBuilder rev= new StringBuilder();
         int length = s.length();
         for ( int i = length - 1; i >= 0; i-- )
-            rev= rev + s.charAt(i);
-        if (s.equals(rev))
+            rev.append(s.charAt(i));
+        if (s.equals(rev.toString()))
             System.out.println("The word \""+s+"\" is symmetric.");
         else
             System.out.println("The word \""+s+"\" isn't symmetric.");

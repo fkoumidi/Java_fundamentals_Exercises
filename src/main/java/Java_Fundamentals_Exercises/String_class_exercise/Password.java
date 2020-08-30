@@ -1,14 +1,11 @@
-package String_class_exercise;
+package Java_Fundamentals_Exercises.String_class_exercise;
 
 import lombok.Data;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Data
 public class Password {
     private String password;
-    Pattern pattern;
-    Matcher matcher;
+
 
     public Password(String password) {
        this.password = password;

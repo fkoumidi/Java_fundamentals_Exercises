@@ -1,4 +1,4 @@
-package String_class_exercise;
+package Java_Fundamentals_Exercises.String_class_exercise;
 
 public class Message {
 

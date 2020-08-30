@@ -1,4 +1,4 @@
-package Exercises_on_simple_algorithms;
+package Java_Fundamentals_Exercises.Exercises_on_simple_algorithms;
 
 import java.util.Scanner;
 import java.lang.*;

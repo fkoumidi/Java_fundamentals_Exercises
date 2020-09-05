@@ -15,7 +15,6 @@ public class UI_Three {
             Scanner myObj = new Scanner(System.in);
             System.out.print("\nEnter your password:");
             str = myObj.nextLine();
-            //str="Mgh6ph111@";
             Password pw = new Password(str);
             Message ms =new Message();
 
